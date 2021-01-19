@@ -120,12 +120,17 @@ a {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 999;
 
     .container {
         display: flex;
         flex-grow: 1;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &__navbar__toggler {
+        display: none;
     }
 
     &__logo {
@@ -151,6 +156,13 @@ a {
         color: $light;
         margin-right: 1rem;
     }
+
+    &.has-scrolled {
+        background-color: $dark;
+        // backdrop-filter: blur(10px);
+    }
+
+
 }
 
 .hero {
@@ -496,6 +508,96 @@ a {
 
     .themed_header {
         font-size: 4rem;
+    }
+
+    .navbar {
+        padding: 2rem 0;
+        z-index: 999;
+
+        &__toggler {
+            display: block;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        &__hamburger {
+            height: 3px;
+            width: 30px;
+            background-color: $accent;
+            display: inline-block;
+            border-radius: 50px;
+            position: relative;
+            opacity: 1;
+
+            &::before, &::after {
+                content: '';
+                height: 3px;
+                width: 30px;
+                display: inline-block;
+                border-radius: 50px;
+                position: absolute;
+            }
+
+            &::before {
+                transform: translateY(10px);
+                background-color: $accent;
+                transition: all 0.3s ease-out;
+
+            }
+
+            &::after {
+                transform: translateY(-10px);
+                background-color: $accent;
+                transition: all 0.3s ease-out;
+
+            }
+        }
+
+        &__toggler.is-clicked {
+            .navbar__hamburger {
+                // transform: scale(0.5);
+                background-color: transparent;
+                transition: all 0.3s ease-in-out;
+
+                &::before {
+                    transform: rotate(45deg);
+                    transition: all 0.3s ease-out;
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                    transition: all 0.3s ease-out;
+
+                }
+            }
+        }
+
+        &__links {
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            width: 50%;
+            background-color: #2e252f91;
+            backdrop-filter: blur(10px);
+            position: absolute;
+            top: 100%;
+            right: -100%;
+            z-index: 99;
+            transition: 0.3s all ease-in-out;
+
+            &.is-active {
+                right: 0;
+                transition: 0.3s all ease-in-out;
+            }
+        }
+
+        &__link {
+            margin: 3rem 0;
+        }
     }
 
     .about {
