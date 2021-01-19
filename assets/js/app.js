@@ -3,6 +3,14 @@ $(document).ready(function(){
     var toggler = document.getElementById('navbar__toggler');
     var links = document.getElementById('navbar__links');
 
+    var controller = new ScrollMagic.Controller();
+
+    var navScene = new ScrollMagic.Scene({
+        triggerElement: '#about',
+        triggerHook: 0.1
+    })
+    .setClassToggle('#navbar', 'has-scrolled')
+    .addTo(controller);
 
     $('.navbar__toggler').click(function(){
         links.classList.toggle('is-active');
