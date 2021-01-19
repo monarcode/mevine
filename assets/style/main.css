@@ -675,7 +675,7 @@ a {
             flex-direction: column-reverse;
   }
   .services__img {
-    max-width: 100%;
+    max-width: 70%;
   }
   .services__img img {
     max-width: 100%;
