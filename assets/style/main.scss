@@ -130,7 +130,7 @@ a {
         align-items: center;
     }
 
-    &__navbar__toggler {
+    &__toggler {
         display: none;
     }
 
@@ -641,13 +641,6 @@ a {
         &__content {
             width: 100%;
             margin-top: 3rem;
-        }
-
-        &__title {
-
-            &-img {
-
-            }
         }
     }
 
