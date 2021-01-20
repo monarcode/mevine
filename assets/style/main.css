@@ -163,6 +163,11 @@ a {
   display: flex;
 }
 
+.navbar__logo img {
+  width: 5rem;
+  height: 5rem;
+}
+
 .navbar__logo a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -176,6 +181,14 @@ a {
 
 .navbar__logo a span {
   color: #6666FF;
+}
+
+.navbar__logo a p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
 .navbar__links {
