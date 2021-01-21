@@ -23,6 +23,6 @@ $(document).ready(function(){
 
     // whatsapp linkage
     $('.cta, .contact-cta').click(function(){
-        window.open('https://api.whatsapp.com/send?phone=2348166341883&text=Hello,%20i%20just%20visited%20your%20website,%20how%20can%20i%20get%20started?')
+        window.open('https://api.whatsapp.com/send?phone=2348166341883&text=Hello,%20Mevine%20Exchange,%20I%20would%20like%20to%20trade%20with%20you.')
     })
 })
