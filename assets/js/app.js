@@ -19,5 +19,10 @@ $(document).ready(function(){
         if(!navbar.classList.contains('has-scrolled')){
             navbar.classList.toggle('has-scrolled');
         }
+    });
+
+    // whatsapp linkage
+    $('.cta, .contact-cta').click(function(){
+        window.open('https://api.whatsapp.com/send?phone=8166341883&text=Hello,%20i%20just%20visited%20your%20website,%20how%20can%20i%20get%20started?')
     })
 })

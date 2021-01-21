@@ -61,6 +61,12 @@ a {
     margin: 3rem 0;
     border-radius: 5px;
     display: inline-block;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #5555e8;
+        transition: background-color 0.3s ease;
+    }
 }
 
 .mouse {
@@ -115,7 +121,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -138,25 +144,11 @@ a {
         display: flex;
 
         img {
-            width: 5rem;
-            height: 5rem;
+            height: 3rem;
+            width: auto;
         }
 
         a {
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            color: $light;
-
-            span {
-                color: $accent;
-            }
-
-            p {
-                align-self: center;
-                font-size: 3rem;
-                font-weight: bold;
-            }
         }
     }
 
@@ -167,6 +159,10 @@ a {
     &__link {
         color: $light;
         margin-right: 1rem;
+
+        &:hover {
+            color: $accent;
+        }
     }
 
     &.has-scrolled {
@@ -196,6 +192,7 @@ a {
     &__title {
         font-size: 6rem;
         font-weight: bold;
+        text-align: center;
     }
 
     &__subtitle {
@@ -508,7 +505,7 @@ a {
         gap: 1rem;
 
         a {
-            margin: 1rem 0;
+            margin: 1rem 2rem;
         }
     }
 }
@@ -619,6 +616,12 @@ a {
         }
     }
 
+    .hero {
+        &__subtitle {
+            text-align: center;
+        }
+    }
+
     .about {
         .container {
             flex-direction: column-reverse;
@@ -665,5 +668,9 @@ a {
         &__img {
             height: 5rem;
         }
+    }
+
+    .hero__title, .banner__title {
+        font-size: clamp(3rem, calc(1vw + 50px), 4rem);
     }
 }
