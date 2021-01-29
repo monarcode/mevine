@@ -494,6 +494,10 @@ a {
         display: flex;
         align-items: center;
 
+        a {
+            color: $grey-2;
+        }
+
         img {
             margin-right: 2rem;
         }

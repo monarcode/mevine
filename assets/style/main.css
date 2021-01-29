@@ -647,6 +647,10 @@ a {
           align-items: center;
 }
 
+.footer__contact a {
+  color: #D8D8D8;
+}
+
 .footer__contact img {
   margin-right: 2rem;
 }
